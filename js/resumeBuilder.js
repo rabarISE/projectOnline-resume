@@ -95,7 +95,7 @@ var education = {
                 $("#header").append(formattedRole);
                 var forUl=$("#topContacts");
                 var change = HTMLmobile.replace("%data%", bio.contacts.mobile);
-               var head1= forUl.append(change)
+               var head1= forUl.append(change);
                 $("#header").append(head1);
                 var change1 = HTMLemail.replace("%data%", bio.contacts.email);
                 var head2=forUl.append(change1);
@@ -131,7 +131,7 @@ var education = {
     work.display=
         (function() {
 
-            work.jobs.map(function (ar) {
+            work.jobs.forEach(function (ar) {
                 $("#workExperience").append(HTMLworkStart);
                 var emp = HTMLworkEmployer.replace("%data%", ar.employer);
                 var titl = HTMLworkTitle.replace("%data%", ar.title);
@@ -149,7 +149,7 @@ var education = {
         projects.display=
             (function () {
 
-                 projects.projects.map(function (arr) {
+                 projects.projects.forEach(function (arr) {
                      $("#projects").append(HTMLprojectStart);
                     var titleforproject = HTMLprojectTitle.replace("%data%",arr.title);
                     $(".project-entry:last").append(titleforproject);
@@ -167,14 +167,13 @@ var education = {
                      }
 
                      }
-                 })
+                 });
             })();
 
            education.display=
                (function() {
-                      $("#education").append(HTMLschoolStart);
-                       education.schools.map(function (ar) {
-
+                      education.schools.forEach(function (ar) {
+                           $("#education").append(HTMLschoolStart);
                         var emp = HTMLschoolName.replace("%data%", ar.name);
                         var titl = HTMLschoolLocation.replace("%data%", ar.city);
                         var con = emp.concat(titl);
@@ -185,10 +184,9 @@ var education = {
                         $(".education-entry:last").append(discrep);
 
                     });
-
-                    education.onlineCourses.map(function (arr) {
-
-                        $(".education-entry").append(HTMLonlineClasses);
+                   $("#education").append(HTMLonlineClasses);
+                    education.onlineCourses.forEach(function (arr) {
+                        $("#education").append(HTMLschoolStart);
                         var title = HTMLonlineTitle.replace("%data%", arr.title);
                         $(".education-entry:last").append(title);
                         var date = HTMLonlineDates.replace("%data%", arr.dates);
@@ -203,7 +201,7 @@ var education = {
         function dissplayFoter() {
                 var footer=$("#footerContacts");
                 var change = HTMLmobile.replace("%data%", bio.contacts.mobile);
-                footer.append(change)
+                footer.append(change);
                 var change1 = HTMLemail.replace("%data%", bio.contacts.email);
                 footer.append(change1);
                 var change2 = HTMLgithub.replace("%data%", bio.contacts.github);
