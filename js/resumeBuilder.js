@@ -85,7 +85,7 @@ var education = {
 
 };
 
-
+                              ///display function for objects...
 
          bio.display=
              (function () {
@@ -212,3 +212,11 @@ var education = {
                 s.append(change3);
                 var change4 = HTMLlocation.replace("%data%", bio.contacts.location);
                 s.append(change4);
+                             }
+                dissplayFoter();
+
+                
+               function displayMap() {
+                   $("#mapDiv").append(googleMap);
+               }
+              displayMap();
