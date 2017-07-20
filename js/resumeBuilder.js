@@ -91,24 +91,24 @@ var education = {
              (function () {
                 var formattedName=HTMLheaderName.replace("%data%","Rabar");
                 var formattedRole=HTMLheaderRole.replace("%data%","programer");
-                var c=$(".clear-fix").append(formattedName);
+                var forformattedname=$(".clear-fix").append(formattedName);
                 $("#header").append(formattedRole);
-                var s=$("#topContacts");
+                var forUl=$("#topContacts");
                 var change = HTMLmobile.replace("%data%", bio.contacts.mobile);
-               var x1= s.append(change)
-                $("#header").append(x1);
+               var head1= forUl.append(change)
+                $("#header").append(head1);
                 var change1 = HTMLemail.replace("%data%", bio.contacts.email);
-                var x2=s.append(change1);
-                $("#header").append(x2);
+                var head2=forUl.append(change1);
+                $("#header").append(head2);
                 var change2 = HTMLgithub.replace("%data%", bio.contacts.github);
-               var x3=s.append(change2);
-                $("#header").append(x3);
+               var head3=forUl.append(change2);
+                $("#header").append(head3);
                 var change3 = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-                var x4=s.append(change3);
-                $("#header").append(x4);
+                var head4=forUl.append(change3);
+                $("#header").append(head4);
                 var change4 = HTMLlocation.replace("%data%", bio.contacts.location);
-               var x5= s.append(change4);
-                $("#header").append(x5);
+               var head5= forUl.append(change4);
+                $("#header").append(head5);
                 var picture = HTMLbioPic.replace("%data%", bio.bioPic);
                 $(".center-content").append(picture);
                 var messge=HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
@@ -201,22 +201,22 @@ var education = {
        
 
         function dissplayFoter() {
-                var s=$("#footerContacts");
+                var footer=$("#footerContacts");
                 var change = HTMLmobile.replace("%data%", bio.contacts.mobile);
-                s.append(change)
+                footer.append(change)
                 var change1 = HTMLemail.replace("%data%", bio.contacts.email);
-                s.append(change1);
+                footer.append(change1);
                 var change2 = HTMLgithub.replace("%data%", bio.contacts.github);
-                s.append(change2);
+                footer.append(change2);
                 var change3 = HTMLtwitter.replace("%data%", bio.contacts.twitter);
-                s.append(change3);
+                footer.append(change3);
                 var change4 = HTMLlocation.replace("%data%", bio.contacts.location);
-                s.append(change4);
+                footer.append(change4);
                              }
                 dissplayFoter();
 
-                
+
                function displayMap() {
-                   $("#mapDiv").append(googleMap);
+                   $("#mapDiv").append(googleMap); //display map
                }
               displayMap();
