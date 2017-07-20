@@ -198,3 +198,17 @@ var education = {
 
                     });
                 })();
+       
+
+        function dissplayFoter() {
+                var s=$("#footerContacts");
+                var change = HTMLmobile.replace("%data%", bio.contacts.mobile);
+                s.append(change)
+                var change1 = HTMLemail.replace("%data%", bio.contacts.email);
+                s.append(change1);
+                var change2 = HTMLgithub.replace("%data%", bio.contacts.github);
+                s.append(change2);
+                var change3 = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+                s.append(change3);
+                var change4 = HTMLlocation.replace("%data%", bio.contacts.location);
+                s.append(change4);
